@@ -21,10 +21,16 @@
         android:layout_height="wrap_content"
         android:id="@+id/et_log"
         android:text="@string/et_log_default"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_date"
+        android:onClick="openDatePicker"/>
 
     <android.support.v7.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="true"
-        android:text="@string/send"/>
+        android:text="@string/send"
+        android:onClick="sendMessage"/>
 </LinearLayout>
