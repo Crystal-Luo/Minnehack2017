@@ -18,10 +18,10 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
-<<<<<<< HEAD
+
         <activity android:name=".HistoryActivity"
             android:parentActivityName=".MainActivity"></activity>
-=======
+
         <activity
             android:name=".MenuTabActivity"
             android:label="@string/title_activity_menu_tab"
