@@ -48,5 +48,11 @@
             android:textAllCaps="true"
             android:text="@string/send"
             android:onClick="sendMessage"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diagnose Symptoms"
+            android:onClick="diagnoseSymptoms"/>
     </LinearLayout>
 </LinearLayout>

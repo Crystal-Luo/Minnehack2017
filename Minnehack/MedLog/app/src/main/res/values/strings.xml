@@ -14,4 +14,7 @@
     <string name="pref_phone">Phone Number</string>
     <string name="pref_notif">Daily Reminder</string>
     <string name="pref_notif_time">Time</string>
+    <string name="title_activity_menu_tab">MenuTabActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="fever_text">A fever involves your body temperature being above its normal range, often accompanied by sweating, shivering, headaches, and sometimes hallucinations and/or convulsions. If you are suffering from a fever, you may have a virus, a bacterial infection, heat exhaustion, extreme sunburn, or a malignant tumor.</string>
 </resources>
