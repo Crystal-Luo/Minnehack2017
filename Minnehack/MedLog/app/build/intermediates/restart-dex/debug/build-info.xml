@@ -5,29 +5,29 @@
     density="xxxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="45415082644422"
+    timestamp="53149037946508"
     token="8714528227418892864"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="790" />
+        duration="149" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="396" />
+        duration="14" />
     <task
         name="verifier"
-        duration="4" />
+        duration="0" />
 
     <artifact
         location="/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="45415082644422"
+        timestamp="53149037946508"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/outputs/apk/app-debug.apk"

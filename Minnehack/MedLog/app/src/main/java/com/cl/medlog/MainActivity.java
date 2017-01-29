@@ -25,10 +25,11 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 import java.lang.Math;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String KEY_MESSAGE
+    public static final String KEY_MESSAGE = "com.cl.medlog.MainActivity.KEY";
     EditText etLog;
     TextView tvSelectedDate;
     @Override
@@ -112,10 +113,60 @@ public class MainActivity extends AppCompatActivity {
     public void randomHealthyAction(View view)
     {
         Intent intent = new Intent(this, HealthyStuff.class);
-        int randPaul = (int) 15 * Math.random();
+        int randPaul = (int) (50.0 * Math.random());
         switch(randPaul)
         {
-            case 0:
+            case 0: intent.putExtra(KEY_MESSAGE, "Eat an orange!"); break;
+            case 1: intent.putExtra(KEY_MESSAGE, "Play a game of soccer!"); break;
+            case 2: intent.putExtra(KEY_MESSAGE, "Take your dog on a walk!"); break;
+            case 3: intent.putExtra(KEY_MESSAGE, "Run up one hundred seven flights of stairs!"); break;
+            case 4: intent.putExtra(KEY_MESSAGE, "Go bungee jumping!"); break;
+            case 5: intent.putExtra(KEY_MESSAGE, "Climb Mount Everest!"); break;
+            case 6: intent.putExtra(KEY_MESSAGE, "Go over Niagara Falls in a barrel!"); break;
+            case 7: intent.putExtra(KEY_MESSAGE, "Crawl to China!"); break;
+            case 8: intent.putExtra(KEY_MESSAGE, "Re-enact the seige of Orleans!"); break;
+            case 9: intent.putExtra(KEY_MESSAGE, "Debate the merits of government redistribution of wealth!"); break;
+            case 10: intent.putExtra(KEY_MESSAGE, "Play a rousing match of tennis!"); break;
+            case 11: intent.putExtra(KEY_MESSAGE, "Win at Microsoft Minesweeper on the hardest setting!"); break;
+            case 12: intent.putExtra(KEY_MESSAGE, "Build a giant robot with laser eyes!"); break;
+            case 13: intent.putExtra(KEY_MESSAGE, "Engage in scientific research!"); break;
+            case 14: intent.putExtra(KEY_MESSAGE, "Perform open heart surgery!"); break;
+            case 15: intent.putExtra(KEY_MESSAGE, "Prepare a large meal of traditional Indian cuisine!"); break;
+            case 16: intent.putExtra(KEY_MESSAGE, "Write your mother a letter!"); break;
+            case 17: intent.putExtra(KEY_MESSAGE, "Be a superhero!"); break;
+            case 18: intent.putExtra(KEY_MESSAGE, "Take the skinheads bowling!"); break;
+            case 19: intent.putExtra(KEY_MESSAGE, "Go fishing for weasels in the Caribbean!"); break;
+            case 20: intent.putExtra(KEY_MESSAGE, "Kill the headlights and put it in neutral!"); break;
+            case 21: intent.putExtra(KEY_MESSAGE, "Dress up like a sultan in your onion head hat!"); break;
+            case 22: intent.putExtra(KEY_MESSAGE, "Put Humpty Dumpty back together again!"); break;
+            case 23: intent.putExtra(KEY_MESSAGE, "Free a rat from a cage!"); break;
+            case 24: intent.putExtra(KEY_MESSAGE, "Dodge the draft!"); break;
+            case 25: intent.putExtra(KEY_MESSAGE, "Don't kill a mockingbird!"); break;
+            case 26: intent.putExtra(KEY_MESSAGE, "Prove Fermat's Last Theorem!"); break;
+            case 27: intent.putExtra(KEY_MESSAGE, "Sleepwalk through your waking life and wake-walk through your dreams!"); break;
+            case 28: intent.putExtra(KEY_MESSAGE, "Spend 24 hours meditating atop a flag pole!"); break;
+            case 29: intent.putExtra(KEY_MESSAGE, "Play bass for the Sex Pistols!"); break;
+            case 30: intent.putExtra(KEY_MESSAGE, "Take out a life insurance policy!"); break;
+            case 31: intent.putExtra(KEY_MESSAGE, "Verify the Law of Universal Gravitation!"); break;
+            case 32: intent.putExtra(KEY_MESSAGE, "Circumnavigate the Earth!"); break;
+            case 33: intent.putExtra(KEY_MESSAGE, "Program a Lisp interpreter!"); break;
+            case 34: intent.putExtra(KEY_MESSAGE, "Don't take any wooden nickels!"); break;
+            case 35: intent.putExtra(KEY_MESSAGE, "Stop and smell the roses!"); break;
+            case 36: intent.putExtra(KEY_MESSAGE, "Spend a year at Walden Pond!"); break;
+            case 37: intent.putExtra(KEY_MESSAGE, "Bury something beneath the floorboards!"); break;
+            case 38: intent.putExtra(KEY_MESSAGE, "Make an Android app!"); break;
+            case 39: intent.putExtra(KEY_MESSAGE, "Expose the lunacy of the United States Constitution!"); break;
+            case 40: intent.putExtra(KEY_MESSAGE, "Determine the rate of decay of a radioactive isotope!"); break;
+            case 41: intent.putExtra(KEY_MESSAGE, "Cross a border!"); break;
+            case 42: intent.putExtra(KEY_MESSAGE, "Ski uphill!"); break;
+            case 43: intent.putExtra(KEY_MESSAGE, "Keep 'em separated!"); break;
+            case 44: intent.putExtra(KEY_MESSAGE, "Don't talk about Fight Club!");
+            case 45: intent.putExtra(KEY_MESSAGE, "Put on a tie!"); break;
+            case 46: intent.putExtra(KEY_MESSAGE, "Make and sell soap!"); break;
+            case 47: intent.putExtra(KEY_MESSAGE, "Don't act like it's not Opposite Day!"); break;
+            case 48: intent.putExtra(KEY_MESSAGE, "Sleep like the woodchuck!"); break;
+            case 49: intent.putExtra(KEY_MESSAGE, "Go to college to get more knowledge!"); break;
+            default: intent.putExtra(KEY_MESSAGE, "Die!"); break;       //Note that the switch block will never fall through to this statement and as such it will never occur. Further note that this statement is more or less equivalent to about half of the others, perhaps more on a bad day.
         }
         startActivity(intent);
     }
