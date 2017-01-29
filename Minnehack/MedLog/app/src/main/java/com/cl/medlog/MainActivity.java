@@ -78,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
         String email = prefs.getString("doc_email", null);
         String message = etLog.getText().toString();
         Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", email, null));
-        intent.putExtra(Intent.EXTRA_SUBJECT, tvSelectedDate.getText() + " Log");
+        //TODO: Add preferences menu for user to add default email
+        intent.putExtra(Intent.EXTRA_SUBJECT, tvSelectedDate.getText()+" Log");
         intent.putExtra(Intent.EXTRA_TEXT, message);
         startActivity(Intent.createChooser(intent, "Send Email"));
     }
