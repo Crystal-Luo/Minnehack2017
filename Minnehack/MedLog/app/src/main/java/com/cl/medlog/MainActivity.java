@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
@@ -22,12 +23,16 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
     EditText etLog;
     TextView tvSelectedDate;
+    SQLiteDatabase logHistory;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
+
+        //History database
+        logHistory = openOrCreateDatabase("history", MODE_PRIVATE, null);
         //Get today's date
         final Calendar c = Calendar.getInstance();
         int year = c.get(Calendar.YEAR);
@@ -50,8 +55,13 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_settings:
                 // User chose the "Settings" item, show the app settings UI...
-                Intent intent = new Intent(this, SettingsActivity.class);
-                startActivity(intent);
+                Intent settings = new Intent(this, SettingsActivity.class);
+                startActivity(settings);
+                return true;
+
+            case R.id.action_history:
+                Intent history = new Intent(this, HistoryActivity.class);
+                startActivity(history);
                 return true;
 
             default:
@@ -63,9 +73,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMessage(View view) {
+        //TODO: Save message to log
+        logHistory.execSQL("CREATE TABLE IF NOT EXISTS Messages(Date VARCHAR, Message VARCHAR");
+        logHistory.execSQL("INSERT INTO Messages(");
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String email = prefs.getString("doc_email", null);
         String message = etLog.getText().toString();
+
+        logHistory.execSQL("CREATE TABLE IF NOT EXISTS Messages(Date VARCHAR, Message VARCHAR");
+        logHistory.execSQL("INSERT INTO Messages('" + tvSelectedDate.getText() + "'), '" + message + "');");
+
         Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", email, null));
         intent.putExtra(Intent.EXTRA_SUBJECT, tvSelectedDate.getText()+" Log");
         intent.putExtra(Intent.EXTRA_TEXT, message);

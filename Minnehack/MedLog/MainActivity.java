@@ -39,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessage(View view) {
         String message = etLog.getText().toString();
         Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "DoctorMHack@gmail.com", null));
-        //TODO: Add preferences menu for user to add default email
-        intent.putExtra(Intent.EXTRA_SUBJECT, tvSelectedDate.getText()+" Log"); //TODO: Add date picker on main activity
+        intent.putExtra(Intent.EXTRA_SUBJECT, tvSelectedDate.getText()+" Log");
         intent.putExtra(Intent.EXTRA_TEXT, message);
         startActivity(Intent.createChooser(intent, "Send Email"));
     }
