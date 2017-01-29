@@ -13,4 +13,25 @@
     <string name="pref_contact_info">Doctor\'s Contact Information</string>
     <string name="pref_email">Email</string>
     <string name="pref_phone">Phone Number</string>
+<<<<<<< HEAD
+=======
+    <string name="pref_notif">Daily Reminder</string>
+    <string name="pref_notif_time">Time</string>
+    <string name="title_activity_menu_tab">MenuTabActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="symptom_checker_welcome">Welcome to the Symptom Checker, where you can find possible causes of common ailments from which you may be suffering. Please choose an option below.</string>
+    <string name="fever_text">A fever involves your body temperature being above its normal range, often accompanied by sweating, shivering, headaches, and sometimes hallucinations and/or convulsions. If you are suffering from a fever, you may have a virus, a bacterial infection, heat exhaustion, extreme sunburn, or a malignant tumor.</string>
+    <string name="headache_text">A headache is pain in the head. If you have a headache, you may have a brain aneurysm, a brain tumor, carbon monoxide poisoning, meningitis, or brain freeze.</string>
+    <string name="earache_text">An earache is pain in the ear. If you have an earache, may have earwax blockage, a middle ear infection, a sinus infection, tonsillitis, temporomandibular joint disorder, or eardrum rupture.</string>
+    <string name="stomachache_text">A stomachache is pain in the abdominal region. If your stomach hurts, you may have indigestion, appendicitis, kidney stones, ulcers, constipation, or inflammatory bowel disaease.</string>
+    <string name="cough_text">A cough is a sudden, involuntary convulsion of the throat region that assists in clearing obstructions of the breathing passages. If you are coughing, you may have whooping cough, bronchitis, cystic fibrosis, lung cancer, emphysema, heart failure, or tuberculosis.</string>
+    <string name="sore_throat_text">A sore throat is a sensation of roughness in the esophagus. If you have a sore throat, you may have a cold, influenza, streptococcal pharyngitis, allergies, or acid reflux.</string>
+    <string name="blurred_vision_text">Blurring of the vision is a lack of sharpness in eyesight resulting in incapacity to perceive fine details. If you are suffering from blurred vision, you may be nearsighted or farsighted or have a migraine or stroke.</string>
+    <string name="paralysis_text">Paralysis is the inability to exert control over parts or all of the body. If you are experiencing paralysis, you may have Bell\'s Palsy, stroke, or a broken neck or other spinal cord injury.</string>
+    <string name="numbness_text">Numbness in the extremities or other parts of the body can be caused by nerve damage, carpal tunnel syndrome, diabetic neuropathy, spinal cord injury, stroke, brain hemorrhage, frostbite, or spinal cord abscess.</string>
+    <string name="rotting_flesh_text">Rotting flesh in living individuals, or necrosis, is the premature death of living cells. If you are experiencing necrosis, you may have experienced severe mechanical trauma, poor blood circulation, frostbite, bacterial infection, or snake or spider bite. You may also be dead, in which case you may wish to seek spiritual, rather than medical, help.</string>
+    <string name="dizziness_text">Dizziness is a feeling of physical disorientation, as though about to fall over. If you are dizzy, you may have heart muscle disease, anxiety, ear infection, dehydration, low blood sugar, beriberi, or hypovolemic shock.</string>
+    <string name="lack_of_a_head_text">You appear to have been decapitated.</string>
+    <string name="cancer_text">You have cancer.</string>
+>>>>>>> refs/remotes/origin/master
 </resources>

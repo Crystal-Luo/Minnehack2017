@@ -9,19 +9,28 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
+
     EditText etLog;
     TextView tvSelectedDate;
     //SQLiteDatabase logHistory;
@@ -52,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -84,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         //long newRowId = logHistory.insert(HistoryContract.HistoryEntry.TABLE_NAME, null, values);
 
         Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", email, null));
-        intent.putExtra(Intent.EXTRA_SUBJECT, tvSelectedDate.getText()+" Log");
+        intent.putExtra(Intent.EXTRA_SUBJECT, tvSelectedDate.getText() + " Log");
         intent.putExtra(Intent.EXTRA_TEXT, message);
         startActivity(Intent.createChooser(intent, "Send Email"));
     }
@@ -93,6 +103,29 @@ public class MainActivity extends AppCompatActivity {
         DatePickerFragment picker = new DatePickerFragment();
         picker.show(getSupportFragmentManager(), "datePicker");
     }
+
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    public Action getIndexApiAction() {
+        Thing object = new Thing.Builder()
+                .setName("Main Page") // TODO: Define a title for the content shown.
+                // TODO: Make sure this auto-generated URL is correct.
+                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+                .build();
+        return new Action.Builder(Action.TYPE_VIEW)
+                .setObject(object)
+                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+                .build();
+    }
+
+    public void diagnoseSymptoms(View view)
+    {
+        Intent intent = new Intent(this, DiagnosticPage.class);
+        startActivity(intent);
+    }
+
 
     public static class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
         @Override
@@ -106,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
-            ((TextView) getActivity().findViewById(R.id.tv_date)).setText((month+1) + "/" + day + "/" + year);
+            ((TextView) getActivity().findViewById(R.id.tv_date)).setText((month + 1) + "/" + day + "/" + year);
         }
     }
 }
