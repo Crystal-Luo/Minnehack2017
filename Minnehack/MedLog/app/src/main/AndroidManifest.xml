@@ -36,7 +36,19 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".DiagnosticPage" />
-        <activity android:name=".FeverPage"></activity>
+        <activity android:name=".FeverPage" />
+        <activity android:name=".HeadachePage" />
+        <activity android:name=".EarachePage" />
+        <activity android:name=".StomachachePage" />
+        <activity android:name=".CoughPage" />
+        <activity android:name=".SoreThroatPage" />
+        <activity android:name=".BlurredVisionPage" />
+        <activity android:name=".ParalysisPage" />
+        <activity android:name=".NumbnessPage" />
+        <activity android:name=".RottingFleshPage" />
+        <activity android:name=".DizzinessPage" />
+        <activity android:name=".LackOfAHeadPage" />
+        <activity android:name=".CancerPage"></activity>
     </application>
 
 </manifest>
