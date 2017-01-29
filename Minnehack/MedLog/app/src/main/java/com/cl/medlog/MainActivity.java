@@ -24,11 +24,11 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
-
-import java.util.Calendar;
+import java.lang.Math;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String KEY_MESSAGE
     EditText etLog;
     TextView tvSelectedDate;
     @Override
@@ -106,6 +106,17 @@ public class MainActivity extends AppCompatActivity {
     public void diagnoseSymptoms(View view)
     {
         Intent intent = new Intent(this, DiagnosticPage.class);
+        startActivity(intent);
+    }
+
+    public void randomHealthyAction(View view)
+    {
+        Intent intent = new Intent(this, HealthyStuff.class);
+        int randPaul = (int) 15 * Math.random();
+        switch(randPaul)
+        {
+            case 0:
+        }
         startActivity(intent);
     }
 

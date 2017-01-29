@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/res/merged/debug/xml/pref_headers.xml",
+        "source": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/src/main/res/xml/pref_headers.xml"
+    },
+    {
+        "merged": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/res/merged/debug/xml/pref_doc_contact.xml",
+        "source": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/src/main/res/xml/pref_doc_contact.xml"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/res/merged/debug/menu/menu_menu_tab.xml",
+        "source": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/src/main/res/menu/menu_menu_tab.xml"
+    },
+    {
+        "merged": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/res/merged/debug/menu/menu.xml",
+        "source": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/src/main/res/menu/menu.xml"
+    }
+]

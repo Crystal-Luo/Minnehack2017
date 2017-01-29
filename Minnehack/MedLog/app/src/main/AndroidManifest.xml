@@ -48,7 +48,8 @@
         <activity android:name=".RottingFleshPage" />
         <activity android:name=".DizzinessPage" />
         <activity android:name=".LackOfAHeadPage" />
-        <activity android:name=".CancerPage"></activity>
+        <activity android:name=".CancerPage" />
+        <activity android:name=".HealthyStuff"></activity>
     </application>
 
 </manifest>

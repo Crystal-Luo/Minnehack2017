@@ -1,0 +1,7 @@
+#Sun Jan 29 07:31:09 CST 2017
+base.0=/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_76a8c3254b6584c2f7d1278e9a1c2ba034738b9c
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_90419eb431ca54efa7132b1e144e2bd591eb48cd/classes.dex
+base.1=/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_90419eb431ca54efa7132b1e144e2bd591eb48cd
+file.0=/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_76a8c3254b6584c2f7d1278e9a1c2ba034738b9c/classes.dex

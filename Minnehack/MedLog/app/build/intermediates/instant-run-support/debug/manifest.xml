@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cl.medlog"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="25" />
+
+    <application
+        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity android:name="com.cl.medlog.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cl.medlog.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name="com.cl.medlog.MenuTabActivity"
+            android:label="@string/title_activity_menu_tab"
+            android:parentActivityName="com.cl.medlog.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cl.medlog.MainActivity" />
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name="com.cl.medlog.DiagnosticPage" />
+        <activity android:name="com.cl.medlog.FeverPage" />
+        <activity android:name="com.cl.medlog.HeadachePage" />
+        <activity android:name="com.cl.medlog.EarachePage" />
+        <activity android:name="com.cl.medlog.StomachachePage" />
+        <activity android:name="com.cl.medlog.CoughPage" />
+        <activity android:name="com.cl.medlog.SoreThroatPage" />
+        <activity android:name="com.cl.medlog.BlurredVisionPage" />
+        <activity android:name="com.cl.medlog.ParalysisPage" />
+        <activity android:name="com.cl.medlog.NumbnessPage" />
+        <activity android:name="com.cl.medlog.RottingFleshPage" />
+        <activity android:name="com.cl.medlog.DizzinessPage" />
+        <activity android:name="com.cl.medlog.LackOfAHeadPage" />
+        <activity android:name="com.cl.medlog.CancerPage" />
+        <activity android:name="com.cl.medlog.HealthyStuff" />
+    </application>
+
+</manifest>
