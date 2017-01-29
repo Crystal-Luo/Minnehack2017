@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.content.SharedPreferencesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -68,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         String email = prefs.getString("doc_email", null);
         String message = etLog.getText().toString();
         Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", email, null));
-        //TODO: Add preferences menu for user to add default email
         intent.putExtra(Intent.EXTRA_SUBJECT, tvSelectedDate.getText()+" Log");
         intent.putExtra(Intent.EXTRA_TEXT, message);
         startActivity(Intent.createChooser(intent, "Send Email"));
