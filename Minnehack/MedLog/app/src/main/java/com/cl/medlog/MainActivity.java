@@ -2,6 +2,7 @@ package com.cl.medlog;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
@@ -23,7 +24,7 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
     EditText etLog;
     TextView tvSelectedDate;
-    SQLiteDatabase logHistory;
+    //SQLiteDatabase logHistory;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(myToolbar);
 
         //History database
-        logHistory = openOrCreateDatabase("history", MODE_PRIVATE, null);
+        //DBHelper dbHelper = new DBHelper(getApplicationContext());
+        //logHistory = dbHelper.getWritableDatabase();
         //Get today's date
         final Calendar c = Calendar.getInstance();
         int year = c.get(Calendar.YEAR);
@@ -73,15 +75,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMessage(View view) {
-        //TODO: Save message to log
-        logHistory.execSQL("CREATE TABLE IF NOT EXISTS Messages(Date VARCHAR, Message VARCHAR");
-        logHistory.execSQL("INSERT INTO Messages(");
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String email = prefs.getString("doc_email", null);
         String message = etLog.getText().toString();
-
-        logHistory.execSQL("CREATE TABLE IF NOT EXISTS Messages(Date VARCHAR, Message VARCHAR");
-        logHistory.execSQL("INSERT INTO Messages('" + tvSelectedDate.getText() + "'), '" + message + "');");
+        /*ContentValues values = new ContentValues();
+        values.put(HistoryContract.HistoryEntry.DATE_COLUMN, tvSelectedDate.getText().toString());
+        values.put(HistoryContract.HistoryEntry.MESSAGE_COLUMN, message);*/
+        //long newRowId = logHistory.insert(HistoryContract.HistoryEntry.TABLE_NAME, null, values);
 
         Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", email, null));
         intent.putExtra(Intent.EXTRA_SUBJECT, tvSelectedDate.getText()+" Log");

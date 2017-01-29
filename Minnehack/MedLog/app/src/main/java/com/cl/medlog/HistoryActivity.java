@@ -10,20 +10,21 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TextView;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+import static com.cl.medlog.HistoryContract.HistoryEntry.TABLE_NAME;
+
 public class HistoryActivity extends AppCompatActivity {
     LinearLayout layout;
     RecyclerView rv;
+    //DBHelper dbHelp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,96 +35,47 @@ public class HistoryActivity extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
         layout = (LinearLayout) findViewById(R.id.layout_history);
+        /*List<HistoryItem> list = new ArrayList<HistoryItem>();
+        dbHelp = new DBHelper(getApplicationContext());
+        SQLiteDatabase db = dbHelp.getReadableDatabase();
+        String[] projection = {
+                HistoryContract.HistoryEntry._ID,
+                HistoryContract.HistoryEntry.DATE_COLUMN,
+                HistoryContract.HistoryEntry.MESSAGE_COLUMN
+        };
+
+// Filter results WHERE "title" = 'My Title'
+        String selection = "*";
+        String[] selectionArgs = null;
+
+// How you want the results sorted in the resulting Cursor
+        String sortOrder =
+                HistoryContract.HistoryEntry.DATE_COLUMN + " DESC";
+
+        Cursor cursor = db.query(
+                HistoryContract.HistoryEntry.TABLE_NAME,                     // The table to query
+                projection,                               // The columns to return
+                selection,                                // The columns for the WHERE clause
+                selectionArgs,                            // The values for the WHERE clause
+                null,                                     // don't group the rows
+                null,                                     // don't filter by row groups
+                sortOrder                                 // The sort order
+        );
+        Cursor c = db.rawQuery("Select * from " + TABLE_NAME, null); //TODO: WRONG?
+        c.moveToFirst();
         rv = (RecyclerView) findViewById(R.id.rv_history);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setItemAnimator(new DefaultItemAnimator());
-        List<HistoryItem> list = new ArrayList<HistoryItem>();
-        //Get messages from database and display them
-        SQLiteDatabase logHistory = openOrCreateDatabase("history", MODE_PRIVATE, null);
-        Cursor resultSet = logHistory.rawQuery("Select * from Messages", null);
-        resultSet.moveToFirst();
-        while (resultSet.moveToNext()) {
-            String date = resultSet.getString(resultSet.getColumnIndexOrThrow("Date"));
-            String message = resultSet.getString(resultSet.getColumnIndexOrThrow("Message"));
-            list.add(new HistoryItem(date, message));
-        }
-        rv.setAdapter(new HistoryAdapter(list), R.layout.rv_card);
-        //resultSet.close();
+        do {
+            String date = c.getString(1);
+            String message = c.getString(2);
+            list.add(new HistoryItem(message, date));
+        }while (c.moveToNext());
+
+        c.close();
+        rv.setAdapter(new HistoryAdapter(list, R.id.card_view));*/
     }
-
-    public class HistoryItem {
-        String date;
-        String message;
-
-        public HistoryItem(String date, String message) {
-            this.date = date;
-            this.message = message;
-        }
-
-        public String getDate() {
-            return date;
-        }
-
-        public String getMessage() {
-            return message;
-        }
-    }
-
-    public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder> {
-
-        private List<HistoryItem> items;
-        private int itemLayout;
-
-        public HistoryAdapter(List<HistoryItem> items, int itemLayout) {
-            this.items = items;
-            this.itemLayout = itemLayout;
-        }
-
-        public void add(HistoryItem item, int position) {
-            items.add(position, item);
-            notifyItemInserted(position);
-        }
-
-        public void remove(HistoryItem item) {
-            int position = items.indexOf(item);
-            items.remove(position);
-            notifyItemRemoved(position);
-        }
-
-        @Override
-        public int getItemCount() {
-            return items.size();
-        }
-
-        @Override
-        public void onBindViewHolder(HistoryViewHolder historyViewHolder, int i) {
-            HistoryItem item = items.get(i);
-            historyViewHolder.date.setText(item.getDate());
-            historyViewHolder.message.setText(item.getMessage());
-        }
-
-        @Override
-        public HistoryViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            View itemView = LayoutInflater.
-                    from(viewGroup.getContext()).
-                    inflate(R.layout.rv_card, viewGroup, false);
-
-            return new HistoryViewHolder(itemView);
-        }
-
-        public class HistoryViewHolder extends RecyclerView.ViewHolder {
-            protected TextView date;
-            protected TextView message;
-
-            public HistoryViewHolder(View v) {
-                super(v);
-                date = (TextView) v.findViewById(R.id.card_date);
-                message = (TextView) v.findViewById(R.id.card_message);
-            }
-        }
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
