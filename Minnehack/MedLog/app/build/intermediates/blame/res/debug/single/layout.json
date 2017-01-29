@@ -20,20 +20,20 @@
         "source": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
-        "source": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/notification_template_lines_media.xml"
-    },
-    {
         "merged": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
         "source": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
-        "source": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/select_dialog_singlechoice_material.xml"
+        "merged": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
+        "source": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/notification_template_lines_media.xml"
     },
     {
         "merged": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
         "source": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "/home/anonymous/Minnehack2017/Minnehack/MedLog/app/build/intermediates/res/merged/debug/layout/activity_rotting_flesh_page.xml",
